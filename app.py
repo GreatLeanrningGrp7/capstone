@@ -13,10 +13,6 @@ import os
 from flask import send_from_directory
 
 
-@app.route('/pr.ico')
-def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'),
-                               'pr.ico', mimetype='image/vnd.microsoft.icon')
 
 @app.route('/', methods = ['POST', 'GET'])
 def home():
